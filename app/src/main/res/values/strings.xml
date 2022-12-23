@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">OrniRec</string>
+    <string name="title_home">Home</string>
+    <string name="title_log">Log</string>
+    <string name="title_profile">Profile</string>
+    <string name="connect">Connect</string>
+    <string name="logo_ornirec">Logo OrniRec</string>
+</resources>

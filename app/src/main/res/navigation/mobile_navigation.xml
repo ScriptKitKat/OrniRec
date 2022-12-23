@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="example.application.com.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_screenRecorder"
+            app:destination="@id/screenRecorder" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_log"
+        android:name="example.application.com.ui.log.LogFragment"
+        android:label="@string/title_log"
+        tools:layout="@layout/fragment_log" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="example.application.com.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+    <activity
+        android:id="@+id/screenRecorder"
+        android:name="example.application.com.ScreenRecorder"
+        android:label="activity_screen_recorder"
+        tools:layout="@layout/activity_screen_recorder" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="example.application.com.MainActivity"
+        android:label="MainActivity" />
+</navigation>
