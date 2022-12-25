@@ -11,8 +11,10 @@
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_navigation_home_to_screenRecorder"
-            app:destination="@id/screenRecorder" />
+            android:id="@+id/action_record"
+            app:destination="@id/screenRecorder"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
 
     <fragment

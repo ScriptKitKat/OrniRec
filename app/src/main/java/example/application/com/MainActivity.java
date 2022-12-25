@@ -1,19 +1,10 @@
 package example.application.com;
 
-import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationBarView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -25,9 +16,6 @@ import androidx.navigation.ui.NavigationUI;
 //import androidx.navigation.ui.NavigationUI;
 
 import example.application.com.databinding.ActivityMainBinding;
-import example.application.com.ui.home.HomeFragment;
-import example.application.com.ui.log.LogFragment;
-import example.application.com.ui.profile.ProfileFragment;
 
 public class MainActivity extends AppCompatActivity {
 

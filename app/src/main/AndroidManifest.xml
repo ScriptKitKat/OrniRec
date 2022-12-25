@@ -14,8 +14,14 @@
         tools:targetApi="31">
         <activity
             android:name=".ScreenRecorder"
-            android:label="Upload a File"
-            android:parentActivityName=".MainActivity">
+            android:exported="false"
+            android:label="Screen Recorder"
+            android:parentActivityName=".MainActivity"
+            >
+            <!-- ^ this changes the title page name -->
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
         </activity>
         <activity
             android:name=".MainActivity"
@@ -26,14 +32,17 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <!--
+        <activity
+            android:name=".ScreenRecorder">
+        </activity>
+        -->
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
-
 </manifest>
