@@ -22,7 +22,6 @@
         android:name="example.application.com.ui.log.LogFragment"
         android:label="@string/title_log"
         tools:layout="@layout/fragment_log"/>
-
     <fragment
         android:id="@+id/navigation_profile"
         android:name="example.application.com.ui.profile.ProfileFragment"
@@ -31,7 +30,7 @@
 
     <activity
         android:id="@+id/screenRecorder"
-        android:name="example.application.com.ScreenRecorder"
+        android:name="example.application.com.record.ScreenRecorder"
         android:label="activity_screen_recorder"
         tools:layout="@layout/activity_screen_recorder" />
     <activity
