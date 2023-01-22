@@ -21,13 +21,14 @@
         android:id="@+id/navigation_log"
         android:name="example.application.com.ui.log.LogFragment"
         android:label="@string/title_log"
-        tools:layout="@layout/fragment_log" />
+        tools:layout="@layout/fragment_log"/>
 
     <fragment
         android:id="@+id/navigation_profile"
         android:name="example.application.com.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile"/>
+
     <activity
         android:id="@+id/screenRecorder"
         android:name="example.application.com.ScreenRecorder"

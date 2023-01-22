@@ -47,6 +47,7 @@ public class HomeFragment extends Fragment {
         return view;
     }
 
+    // https://youtu.be/akuONx5RTy8 <- Navigation stuff lol
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
