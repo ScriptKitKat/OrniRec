@@ -30,11 +30,38 @@
 
     <activity
         android:id="@+id/screenRecorder"
-        android:name="example.application.com.record.ScreenRecorder"
+        android:name="example.application.com.ScreenRecorder"
         android:label="activity_screen_recorder"
         tools:layout="@layout/activity_screen_recorder" />
     <activity
         android:id="@+id/mainActivity"
         android:name="example.application.com.MainActivity"
         android:label="MainActivity" />
+    <!-- Tensorflow -->
+    <fragment
+        android:id="@+id/permissions_fragment"
+        android:name="example.application.com.ui.fragments.PermissionsFragment"
+        android:label="PermissionsFragment" >
+
+        <action
+            android:id="@+id/action_permissions_to_audio"
+            app:destination="@id/audio_fragment"
+            app:popUpTo="@id/permissions_fragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/audio_fragment"
+        android:name="example.application.com.ui.fragments.AudioFragment"
+        android:label="AudioFragment" >
+
+
+        <action
+            android:id="@+id/action_audio_to_permissions"
+            app:destination="@id/permissions_fragment"
+            app:popUpTo="@id/audio_fragment"
+            app:popUpToInclusive="true"/>
+
+    </fragment>
 </navigation>

@@ -51,44 +51,24 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
     }
-
-
-    // getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout, homeFragment).commit();
-    // https://youtu.be/OV25x3a55pk
-
-//    private void replaceFragment(Fragment fragment) {
-//        FragmentManager fragmentManager = getSupportFragmentManager();
-//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//        fragmentTransaction.replace(R.id.frame_layout, fragment);
-//        fragmentTransaction.commit();
-//    }
-
-    // Deprecated version
-//        BottomNavigationView bottomNav = findViewById(R.id.nav_view);
-//        bottomNav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
-//            @SuppressLint("NonConstantResourceId")
-//            @Override
-//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//                Fragment selectedFragment = null;
-//                switch (item.getItemId()) {
-//
-//                    case R.id.navigation_home:
-//                        selectedFragment = new HomeFragment();
-//                        break;
-//
-//                    case R.id.navigation_log:
-//                        selectedFragment = new LogFragment();
-//                        break;
-//
-//                    case R.id.navigation_profile:
-//                        selectedFragment = new ProfileFragment();
-//                        break;
-//                }
-//
-//                if (selectedFragment != null) {
-//                    getSupportFragmentManager().beginTransaction().replace(R.id.mobile_navigation, selectedFragment).commit();
-//                }
-//                return true;
-//            }
-//        });
 }
+
+//class MainActivity : AppCompatActivity() {
+//private lateinit var activityMainBinding: ActivityMainBinding
+//
+//        override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        activityMainBinding = ActivityMainBinding.inflate(layoutInflater)
+//        setContentView(activityMainBinding.root)
+//        }
+//
+//        override fun onBackPressed() {
+//        if (Build.VERSION.SDK_INT == Build.VERSION_CODES.Q) {
+//        // Workaround for Android Q memory leak issue in IRequestFinishCallback$Stub.
+//        // (https://issuetracker.google.com/issues/139738913)
+//        finishAfterTransition()
+//        } else {
+//        super.onBackPressed()
+//        }
+//        }
+//        }

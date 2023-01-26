@@ -1,6 +1,6 @@
+
 plugins {
     id 'com.android.application'
-//    id 'androidx.navigation.safeargs'
 }
 
 android {
@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "example.application.com"
-        minSdk 21
+        minSdk 23
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -29,23 +29,49 @@ android {
     }
     buildFeatures {
         viewBinding true
-        mlModelBinding true
+    }
+    androidResources {
+        noCompress 'tflite'
     }
 }
 
 dependencies {
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
 
+    // App compat and UI
     implementation 'androidx.appcompat:appcompat:1.6.0'
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.1.0'
+
+    // Navigation library
     implementation 'androidx.navigation:navigation-fragment:2.5.3'
     implementation 'androidx.navigation:navigation-ui:2.5.3'
     implementation 'androidx.navigation:navigation-ui:2.6.0-alpha04'
-//    implementation 'org.tensorflow:tensorflow-lite-support:0.4.3'
-//    implementation 'org.tensorflow:tensorflow-lite-metadata:0.4.3'
+    implementation "androidx.navigation:navigation-ui-ktx:2.5.3"
+
+    implementation 'org.tensorflow:tensorflow-lite-task-audio:0.4.3'
+    implementation 'org.tensorflow:tensorflow-lite:2.10.0'
+
+    // Unit testing
+    testImplementation 'androidx.test:rules:1.5.0'
+    testImplementation 'androidx.test:runner:1.5.2'
+    testImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    testImplementation 'org.robolectric:robolectric:4.9.2'
     testImplementation 'junit:junit:4.13.2'
+    testImplementation 'androidx.test.ext:junit:1.1.5'
+
+    // Instrumented testing
+    androidTestImplementation "androidx.test:core:1.5.0"
+    androidTestImplementation "androidx.test:rules:1.5.0"
+    androidTestImplementation "androidx.test:runner:1.5.2"
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
 }

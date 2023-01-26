@@ -14,7 +14,7 @@
         android:theme="@style/Theme.OrniRec"
         tools:targetApi="31">
         <activity
-            android:name=".record.ScreenRecorder"
+            android:name=".ScreenRecorder"
             android:exported="false"
             android:label="Screen Recorder"
             android:parentActivityName=".MainActivity">
