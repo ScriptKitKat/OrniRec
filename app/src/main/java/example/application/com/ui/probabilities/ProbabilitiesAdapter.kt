@@ -21,8 +21,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import example.application.com.R
-import org.tensorflow.lite.examples.audio.R
-import org.tensorflow.lite.examples.audio.databinding.ItemProbabilityBinding
+import example.application.com.databinding.ItemProbabilityBinding
 import org.tensorflow.lite.support.label.Category
 
 internal class ProbabilitiesAdapter : RecyclerView.Adapter<ProbabilitiesAdapter.ViewHolder>() {

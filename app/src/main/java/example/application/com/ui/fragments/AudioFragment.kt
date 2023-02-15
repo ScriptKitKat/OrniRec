@@ -29,7 +29,7 @@ import example.application.com.AudioClassificationHelper
 import example.application.com.R
 import example.application.com.databinding.FragmentAudioBinding
 import example.application.com.ui.probabilities.ProbabilitiesAdapter
-import example.application.com.support.label.Category
+import org.tensorflow.lite.support.label.Category
 
 interface AudioClassificationListener {
     fun onError(error: String)
@@ -226,9 +226,8 @@ class AudioFragment : Fragment() {
         super.onResume()
         // Make sure that all permissions are still present, since the
         // user could have removed them while the app was in paused state.
-        if (!PermissionsFragment.hasPermissions(requireContext())) {
-            Navigation.findNavController(requireActivity(), R.id.fragment_container)
-                .navigate(AudioFragmentDirections.actionAudioToPermissions())
+        if (!PermFragment.hasPermissions(requireContext())) {
+            Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main).navigate(R.id.action_audio_to_permissions)
         }
 
         if (::audioHelper.isInitialized ) {

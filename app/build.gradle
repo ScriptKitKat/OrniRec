@@ -1,6 +1,7 @@
-
 plugins {
     id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+//    id 'androidx.navigation.safeargs'
 }
 
 android {
@@ -42,12 +43,12 @@ dependencies {
 
     // App compat and UI
     implementation 'androidx.appcompat:appcompat:1.6.0'
-    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
-    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.1.0'
 
     // Navigation library
@@ -55,9 +56,10 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui:2.5.3'
     implementation 'androidx.navigation:navigation-ui:2.6.0-alpha04'
     implementation "androidx.navigation:navigation-ui-ktx:2.5.3"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.5.3"
 
     implementation 'org.tensorflow:tensorflow-lite-task-audio:0.4.3'
-    implementation 'org.tensorflow:tensorflow-lite:2.10.0'
+    implementation 'org.tensorflow:tensorflow-lite:2.11.0'
 
     // Unit testing
     testImplementation 'androidx.test:rules:1.5.0'

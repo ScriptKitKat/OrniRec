@@ -5,17 +5,15 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/navigation_home">
 
+
     <fragment
         android:id="@+id/navigation_home"
-        android:name="example.application.com.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" >
+        android:name="example.application.com.ui.home.HomeFragment">
         <action
-            android:id="@+id/action_record"
-            app:destination="@id/screenRecorder"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim" />
+            android:id="@+id/action_navigation_home_to_nav_graph"
+            app:destination="@id/nav_graph" />
     </fragment>
+    <include app:graph="@navigation/nav_graph" />
 
     <fragment
         android:id="@+id/navigation_log"
@@ -28,40 +26,11 @@
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile"/>
 
-    <activity
-        android:id="@+id/screenRecorder"
-        android:name="example.application.com.ScreenRecorder"
-        android:label="activity_screen_recorder"
-        tools:layout="@layout/activity_screen_recorder" />
+
     <activity
         android:id="@+id/mainActivity"
         android:name="example.application.com.MainActivity"
         android:label="MainActivity" />
-    <!-- Tensorflow -->
-    <fragment
-        android:id="@+id/permissions_fragment"
-        android:name="example.application.com.ui.fragments.PermissionsFragment"
-        android:label="PermissionsFragment" >
-
-        <action
-            android:id="@+id/action_permissions_to_audio"
-            app:destination="@id/audio_fragment"
-            app:popUpTo="@id/permissions_fragment"
-            app:popUpToInclusive="true" />
-
-    </fragment>
-
-    <fragment
-        android:id="@+id/audio_fragment"
-        android:name="example.application.com.ui.fragments.AudioFragment"
-        android:label="AudioFragment" >
 
 
-        <action
-            android:id="@+id/action_audio_to_permissions"
-            app:destination="@id/permissions_fragment"
-            app:popUpTo="@id/audio_fragment"
-            app:popUpToInclusive="true"/>
-
-    </fragment>
 </navigation>

@@ -14,15 +14,6 @@
         android:theme="@style/Theme.OrniRec"
         tools:targetApi="31">
         <activity
-            android:name=".ScreenRecorder"
-            android:exported="false"
-            android:label="Screen Recorder"
-            android:parentActivityName=".MainActivity">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -30,12 +21,15 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
+
 </manifest>

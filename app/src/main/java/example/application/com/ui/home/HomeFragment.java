@@ -23,14 +23,14 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        HomeViewModel dashboardViewModel =
+        HomeViewModel homeViewModel =
                 new ViewModelProvider(this).get(HomeViewModel.class);
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
 //        final TextView textView = binding.textHome;
-//        dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+//        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 
@@ -38,12 +38,13 @@ public class HomeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
         NavController navController = Navigation.findNavController(view);
         Button nextB = ((Button) view.findViewById(R.id.connectButton));
         nextB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                navController.navigate(R.id.action_record);
+                navController.navigate(R.id.action_navigation_home_to_nav_graph);
             }
         });
     }
